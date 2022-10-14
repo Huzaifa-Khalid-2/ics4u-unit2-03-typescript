@@ -3,19 +3,43 @@
  *
  * By:      Huzaifa Khalid
  * Version: 1.0
- * Since:   2022-10-5
+ * Since:   2022-10-3
  */
 
 class Stack {
-  stackList: number[] = [];
+  readonly stackList: number[] = []
 
-  push(pushedNumber: number): void {
-    // add a number to list
-    this.stackList.push(pushedNumber);
+  // getters
+  public getStack(): number[] {
+    return this.stackList
   }
 
-  showStack(): void {
-    console.log(this.stackList);
+  // methods
+  public push(pushedNumber: number): void {
+    // add a number to the array
+    if (isNaN(+pushedNumber)) {
+      console.log('That is not a number.')
+    } else {
+      this.stackList.push(pushedNumber)
+    }
+  }
+
+  public pop(): void {
+    // remove a number to the array
+    if (this.stackList.length === 0) {
+      console.log('You cannot pop without values in the array')
+    } else {
+      this.stackList.pop()
+    }
+  }
+
+  public peek(): void {
+    // get the first value of an array
+    if (this.stackList.length === 0) {
+      console.log('cannot get the peak, no number given')
+    } else {
+      console.log(`The peek is: ${this.stackList[0]}`)
+    }
   }
 }
-export = Stack;
+export = Stack
