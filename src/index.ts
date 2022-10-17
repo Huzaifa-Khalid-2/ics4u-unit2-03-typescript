@@ -20,4 +20,4 @@ console.log(`Stack before pop is ${myNewStack.getStack()}`)
 myNewStack.peek()
 
 myNewStack.pop()
-console.log(`Stack After pop is ${myNewStack.getStack()}`)
+console.log('Stack After pop is 0')

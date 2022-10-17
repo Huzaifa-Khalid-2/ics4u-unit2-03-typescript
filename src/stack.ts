@@ -27,7 +27,7 @@ class Stack {
   public pop(): void {
     // remove a number to the array
     if (this.stackList.length === 0) {
-      console.log('You cannot pop without values in the array')
+      console.log('You cannot pop without values in the list')
     } else {
       this.stackList.pop()
     }
